@@ -1,9 +1,11 @@
-// Number 3
-var fs = require('fs');
-var buff = fs.readFileSync('/Users/patrickbogucki/Documents/WebDev/Temp/Node/learnyounode/program.js');
-var splitbuff = buff.toString().split();
-console.log((splitbuff.toString().match(/\n\n/g) || []).length);
-// console.log((splitbuff.toString().match(/,/g) || []).length);
+// Number 4
+
+// // Number 3
+// var fs = require('fs');
+// var buff = fs.readFileSync(process.argv[2]);
+// buff = buff.toString();
+// buff = buff.split('\n');
+// console.log(buff.length - 1); // Last line of code does not contain EOF so length is too long by one
 
 // // Number 2
 // var sum = 0;
