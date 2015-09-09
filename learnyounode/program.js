@@ -1,11 +1,22 @@
-// Number 4
+// Number 5
 var fs = require('fs');
-fs.readFile(process.argv[2], function(err, data) {
-	if (err) throw err;
-	var buff = data.toString();
-	buff = buff.split('\n');
-	console.log(buff.length - 1);
+fs.readdir(process.argv[2], function(err, files) {
+	var extension = process.argv[3];
+	files.forEach(function(file) {
+		if (file.substr(file.lastIndexOf('.') ) === '.' + extension) {
+			console.log(file);
+		}
+	});
 });
+
+// // Number 4
+// var fs = require('fs');
+// fs.readFile(process.argv[2], function(err, data) {
+// 	if (err) throw err;
+// 	var buff = data.toString();
+// 	buff = buff.split('\n');
+// 	console.log(buff.length - 1);
+// });
 
 
 // // Number 3
